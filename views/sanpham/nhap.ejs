@@ -1,0 +1,30 @@
+<h2>Nhap san pham</h2>
+
+<form action="/sanpham/nhap" method="POST">
+    <div>
+        <label>Ten san pham:</label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label>Ngay nhap:</label>
+        <input type="date" name="ngaynhap">
+    </div>
+    <div>
+        <label>So luong:</label>
+        <input type="number" name="soluong">
+    </div>
+    <div>
+        <label>The loai</label>
+        <input type="text" name="the loai">
+    </div>
+    <div>
+        <label>Gia thanh:</label>
+        <input type="number" name="gia">
+    </div>
+    <div>
+        <label>Da check?</label>
+        <input type="radio" id="age1" name="dacheck" value="1">1
+        <input type="radio" id="age2" name="dacheck" value="0">0
+    </div>
+    <button type="submit">Submit</button>
+</form>

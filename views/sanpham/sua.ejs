@@ -1,0 +1,15 @@
+<form action="/sanpham/sua" method="POST">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= sp.name %>">
+    <label>Ngay nhap</label>
+    <input type="date" name="ngaynhap" value="<%= new Date(sp.ngaynhap) %>">
+    <label>So luong</label>
+    <input type="number" name="soluong" value="<%= sp.soluong %>">
+    <label>The loai</label>
+    <input type="text" name="theloai" value="<%= sp.theloai %>">
+    <label>Gia</label>
+    <input type="number" name="gia" value="<%= sp.gia %>">
+    <label>Da check</label>
+    <input type="radio" name="dacheck" value="1" checked="<%= sp.dacheck %>">
+    <input type="radio" name="dacheck" value="0" checked="<%= !sp.dacheck %>">
+</form>
