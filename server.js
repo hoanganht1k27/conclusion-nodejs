@@ -3,10 +3,13 @@ const logger = require('morgan')
 const app = express()
 const mongoose = require('mongoose')
 const path = require('path')
+const cors = require('cors')
 
 const indexRouter = require('./routes/index')
 const theloaiRouter = require('./routes/theloai')
 const sanphamRouter = require('./routes/sanpham')
+
+const fileRouter = require('./routes/file')
 
 const dbString = 'mongodb://localhost:27017/conclusion-nodejs'
 const dbOptions = {
@@ -23,6 +26,7 @@ db.once('open', () => {
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(logger('dev'))
+app.use(cors())
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
@@ -30,5 +34,6 @@ app.set('views', path.join(__dirname, 'views'))
 app.use('/', indexRouter)
 app.use('/theloai', theloaiRouter)
 app.use('/sanpham', sanphamRouter)
+app.use('/file', fileRouter)
 
 app.listen(process.env.PORT || 3000)
