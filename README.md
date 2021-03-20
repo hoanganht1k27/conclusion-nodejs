@@ -8,3 +8,5 @@ Implemented stuff:
 - Move file
 - Cookies
 - JWT
+- Session Based Authentication
+- JWT Based Authentication
